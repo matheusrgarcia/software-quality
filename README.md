@@ -25,3 +25,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Sonarqube
+
+Run `sonar-scanner.bat -D"sonar.projectKey=software-quality" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=2b6fb3caba041029662e02f21c49abdcb3518eaa"` on project root
