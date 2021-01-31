@@ -1,0 +1,25 @@
+.home {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .home {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .home {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .home {
+    width: 1170px;
+  }
+}

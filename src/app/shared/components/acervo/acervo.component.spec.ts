@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AcervoComponent } from './acervo.component';
 
@@ -8,9 +9,9 @@ describe('AcervoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AcervoComponent ]
-    })
-    .compileComponents();
+      declarations: [AcervoComponent],
+      imports: [FormsModule, ReactiveFormsModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {
