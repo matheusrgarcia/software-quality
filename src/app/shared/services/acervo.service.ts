@@ -33,11 +33,8 @@ export class AcervoService {
   }
 
   public excluir(livro: Livro): void {
-    console.log(livro);
-    console.log(this.acervo.livros);
     const index = this.acervo.livros.indexOf(livro);
     this.acervo.livros.splice(index, 1);
-    console.log('aa', index);
   }
 
   public emprestar(livro: Livro): void {

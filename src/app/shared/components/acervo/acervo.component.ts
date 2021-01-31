@@ -26,7 +26,7 @@ export class AcervoComponent implements OnInit {
     private acervoService: AcervoService
   ) {
     this.acervoForm = this.formBuilder.group({
-      title: new FormControl('', Validators.required),
+      title: new FormControl('', Validators.min(1)),
       autor: new FormControl('', Validators.required),
     });
   }
