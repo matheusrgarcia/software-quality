@@ -6,15 +6,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './shared/pages/home/home.component';
 import { AcervoComponent } from './shared/components/acervo/acervo.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, AcervoComponent],
@@ -32,6 +33,7 @@ import { AcervoComponent } from './shared/components/acervo/acervo.component';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
