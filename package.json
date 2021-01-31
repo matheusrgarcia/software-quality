@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test  --code-coverage --browsers=Chrome",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "coverage-badge": "lcov-badge-generator -o badge.svg coverage/lcov.info",
   },
   "private": true,
   "dependencies": {
@@ -21,7 +22,6 @@
     "@angular/platform-browser": "~11.1.1",
     "@angular/platform-browser-dynamic": "~11.1.1",
     "@angular/router": "~11.1.1",
-    "karma-coverage-istanbul-reporter": "^3.0.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
@@ -40,7 +40,8 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "^4.0.1",
     "karma-jasmine-html-reporter": "^1.5.4",
-    "karma-coverage-istanbul-reporter": "3.0.2",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
+    "lcov-badge-generator": "1.0.5",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
