@@ -50,4 +50,27 @@ describe('AcervoService', () => {
     service.excluir({ title: '1984', autor: 'George Orwell', id: 1 });
     expect(service.acervo.livros.length).toBe(4);
   });
+
+  it('should return the Acervo', () => {
+    expect(service.getAcervo()).toEqual({
+      livros: [
+        { title: 'Orgulho e Preconceito', autor: 'Jane Austen', id: 0 },
+        { title: '1984', autor: 'George Orwell', id: 1 },
+        { title: 'O Pequeno Principe', autor: 'Antoine de Saint', id: 2 },
+        { title: 'Dom Casmurro', autor: 'Machado de Assis', id: 3 },
+        { title: 'Harry Potter', autor: 'J.K Rowling', id: 4 },
+      ],
+    });
+  });
+
+  it('should return the lended books', () => {
+    service.livrosEmprestados = [
+      { title: 'O Pequeno Principe', autor: 'Antoine de Saint', id: 2 },
+      { title: 'Dom Casmurro', autor: 'Machado de Assis', id: 3 },
+    ];
+    expect(service.getLivrosEmprestados()).toEqual([
+      { title: 'O Pequeno Principe', autor: 'Antoine de Saint', id: 2 },
+      { title: 'Dom Casmurro', autor: 'Machado de Assis', id: 3 },
+    ]);
+  });
 });
