@@ -48,24 +48,33 @@ export class AcervoComponent implements OnInit {
       this.acervoForm.markAsUntouched();
     }
   }
+
+  public selectLivroEmprestado(livro: Livro): void {
+    this.selectedLivroEmprestado = livro;
+  }
+
+  public selectLivroFromAcervo(livro: Livro): void {
+    this.selectedLivro = livro;
+  }
+
   public excluirLivro(): void {
     if (this.selectedLivro) {
-      this.acervoService.excluir(this.selectedLivro[0]);
-      this.resetSelection();
+      this.acervoService.excluir(this.selectedLivro);
     }
+    this.resetSelection();
   }
 
   public devolverLivro(): void {
     if (this.selectedLivroEmprestado) {
-      this.acervoService.devolver(this.selectedLivroEmprestado[0]);
-      this.resetSelection();
+      this.acervoService.devolver(this.selectedLivroEmprestado);
     }
+    this.resetSelection();
   }
 
   public emprestarLivro(): void {
     if (this.selectedLivro) {
-      this.acervoService.emprestar(this.selectedLivro[0]);
-      this.resetSelection();
+      this.acervoService.emprestar(this.selectedLivro);
     }
+    this.resetSelection();
   }
 }

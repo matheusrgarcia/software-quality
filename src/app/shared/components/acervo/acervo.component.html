@@ -1,8 +1,8 @@
 <mat-card class="box">
   <div class="box__acervo">
     <h3>Acervo</h3>
-    <mat-selection-list [(ngModel)]="selectedLivro" #books [multiple]="false">
-      <mat-list-option *ngFor="let livro of livros" [value]="livro">
+    <mat-selection-list [multiple]="false">
+      <mat-list-option *ngFor="let livro of livros" (click)="selectLivroFromAcervo(livro)" [value]="livro">
         <span>{{ livro.title }} - {{ livro.autor }}</span>
         <mat-divider></mat-divider>
       </mat-list-option>
@@ -14,11 +14,11 @@
     >
       <mat-form-field>
         <mat-label>Nome do Livro</mat-label>
-        <input matInput id="title" formControlName="title" type="text" />
+        <input matInput id="title" name="title" formControlName="title" type="text" />
       </mat-form-field>
       <mat-form-field>
         <mat-label>Autor</mat-label>
-        <input matInput id="autor" formControlName="autor" type="text" />
+        <input matInput id="autor" name="autor" formControlName="autor" type="text" />
       </mat-form-field>
       <button mat-raised-button color="primary" type="submit">Adicionar</button>
     </form>
@@ -51,8 +51,8 @@
   </div>
   <div class="box__emprestados">
     <h3>Livros Emprestados</h3>
-    <mat-selection-list #booksEmprestados [(ngModel)]="selectedLivroEmprestado" [multiple]="false">
-      <mat-list-option *ngFor="let livro of livrosEmprestados" [value]="livro">
+    <mat-selection-list [multiple]="false">
+      <mat-list-option *ngFor="let livro of livrosEmprestados"(click)="selectLivroEmprestado(livro)"  [value]="livro">
         <span>{{ livro.title }} - {{ livro.autor }}</span>
         <mat-divider></mat-divider>
       </mat-list-option>
