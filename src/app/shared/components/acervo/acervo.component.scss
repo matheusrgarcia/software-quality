@@ -1,0 +1,25 @@
+.box {
+  display: flex;
+  flex-direction: row;
+  &__acervo {
+    margin-bottom: 1rem;
+    margin: 1rem;
+    &-actions {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__book {
+    &-actions {
+      margin: 1rem;
+      flex-direction: column;
+      display: flex;
+      button {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  &__emprestados {
+    margin: 1rem;
+  }
+}
