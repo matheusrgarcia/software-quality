@@ -4,7 +4,8 @@ pipeline {
   stages {
 
     stage('Install') {
-      steps { bat 'npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false' }
+      steps { bat 'npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false',
+              bat 'npm install --save-dev @angular-devkit/build-angular' }
     }
 
     stage('Test') {
