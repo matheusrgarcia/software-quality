@@ -8,7 +8,7 @@ pipeline {
     // }
 
     stage('Install') {
-      steps { bat 'npm install -g' }
+      steps { bat 'npm install' }
     }
 
     // stage('Angular CLI') {
