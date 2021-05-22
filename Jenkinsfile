@@ -3,16 +3,20 @@ pipeline {
 
   stages {
 
-    stage('Install') {
+    stage('ByPass registry error') {
       steps { bat 'npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false' }
     }
 
-    stage('Angular install') {
+    stage('Install') {
       steps { bat 'npm install -g npm@latest' }
     }
 
-     stage('Angular CLI') {
+    stage('Angular CLI') {
       steps { bat 'npm install -g @angular/cli' }
+    }
+
+    stage('Angular') {
+      steps { bat 'npm install --save-dev @angular-devkit/build-angular'}
     }
 
     stage('Test') {
