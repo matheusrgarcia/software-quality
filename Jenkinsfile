@@ -8,7 +8,7 @@ pipeline {
     // }
 
     stage('Install') {
-      steps { bat 'npm install' }
+      steps { bat 'npm install --registry https://registry.npmjs.com' }
     }
 
     // stage('Angular CLI') {
