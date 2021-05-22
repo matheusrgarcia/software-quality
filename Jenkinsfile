@@ -8,7 +8,7 @@ pipeline {
     }
 
     stage('Angular install') {
-      steps { bat 'npm install --save-dev @angular-devkit/build-angular' }
+      steps { bat 'npm install --save-dev @angular-devkit/build-angular --registry https://registry.npmjs.com --always-auth false' }
     }
 
     stage('Test') {
