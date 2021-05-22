@@ -11,13 +11,13 @@ pipeline {
       steps { bat 'npm install -g npm@latest' }
     }
 
-    stage('Angular CLI') {
-      steps { bat 'npm install -g @angular/cli' }
-    }
+    // stage('Angular CLI') {
+    //   steps { bat 'npm install -g @angular/cli' }
+    // }
 
-    stage('Angular') {
-      steps { bat 'npm install -g @angular-devkit/build-angular'}
-    }
+    // stage('Angular') {
+    //   steps { bat 'npm install --save-dev @angular-devkit/build-angular'}
+    // }
 
     stage('Test') {
       parallel {
