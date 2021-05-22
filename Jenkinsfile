@@ -7,10 +7,6 @@ pipeline {
       steps { bat 'npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false' }
     }
 
-    stage('Config npmrc') {
-       steps { bat 'vsts-npm-auth -config .npmrc' }
-    }
-
     stage('Install') {
       steps { bat 'npm install' }
     }
