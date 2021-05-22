@@ -2,6 +2,11 @@ pipeline {
   agent any
 
   stages {
+
+    stage('Login') {
+      steps { bat 'npm login' }
+    }
+
     stage('Install') {
       steps { bat 'npm install' }
     }
