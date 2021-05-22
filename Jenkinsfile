@@ -3,9 +3,9 @@ pipeline {
 
   stages {
 
-    stage('ByPass registry error') {
-      steps { bat 'npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false' }
-    }
+    // stage('ByPass registry error') {
+    //   steps { bat 'npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false' }
+    // }
 
     stage('Install') {
       steps { bat 'npm install -g npm@latest' }
