@@ -8,7 +8,7 @@ pipeline {
     }
 
     stage('Set auth token') {
-      steps { bat 'npm config set //registry.npmjs.com/:_authToken "03408764-0cb4-49a8-ba08-ab88ef2b6874"'}
+      steps { bat 'npm config set //registry.npmjs.com/:_authToken ${env.npmToken}'}
     }
 
     stage('Set always auth') {
