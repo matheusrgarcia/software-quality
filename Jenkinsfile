@@ -8,7 +8,7 @@ pipeline {
     // }
 
     stage('Install') {
-      steps { bat 'npm install -g npm@latest' }
+      steps { bat 'npm install -g' }
     }
 
     // stage('Angular CLI') {
@@ -19,16 +19,16 @@ pipeline {
     //   steps { bat 'npm install --save-dev @angular-devkit/build-angular'}
     // }
 
-    // stage('Test') {
-    //   parallel {
-    //     stage('Static code analysis') {
-    //         steps { bat 'npm run-script lint' }
-    //     }
-    //     stage('Unit tests') {
-    //         steps { bat 'npm run-script test' }
-    //     }
-    //   }
-    // }
+    stage('Test') {
+      parallel {
+        stage('Static code analysis') {
+            steps { bat 'npm run-script lint' }
+        }
+        stage('Unit tests') {
+            steps { bat 'npm run-script test' }
+        }
+      }
+    }
 
     stage('Build') {
       steps { bat 'npm run-script build' }
