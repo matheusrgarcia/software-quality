@@ -7,7 +7,7 @@ pipeline {
     //   steps { bat 'npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false' }
     // }
     stage('Install') {
-      steps { bat 'npm install --registry https://registry.npmjs.com _auth=ef362dcc-32fb-4094-b081-9d61afff73ba --always-auth=true' }
+      steps { bat 'npm install --registry https://registry.npmjs.com/:_authToken=ef362dcc-32fb-4094-b081-9d61afff73ba --always-auth=true' }
     }
 
     // stage('Angular CLI') {
