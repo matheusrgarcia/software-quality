@@ -3,7 +3,7 @@ pipeline {
 
   stages {
 
-    state('Login') {
+    stage('Login') {
       steps { bat 'npm set //https://registry.npmjs.com/:_authToken $npmToken'}
     }
 
