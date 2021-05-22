@@ -3,12 +3,8 @@ pipeline {
 
   stages {
 
-    stage('Login') {
-      steps { bat 'npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false' }
-    }
-
     stage('Install') {
-      steps { bat 'npm install' }
+      steps { bat 'npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false' }
     }
 
     stage('Test') {
