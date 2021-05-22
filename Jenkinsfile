@@ -6,9 +6,8 @@ pipeline {
     // stage('ByPass registry error') {
     //   steps { bat 'npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false' }
     // }
-
     stage('Install') {
-      steps { bat 'npm install --registry https://registry.npmjs.com --always-auth false' }
+      steps { bat 'npm install --registry https://registry.npmjs.com _auth=ef362dcc-32fb-4094-b081-9d61afff73ba --always-auth=true' }
     }
 
     // stage('Angular CLI') {
