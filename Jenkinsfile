@@ -16,7 +16,7 @@ pipeline {
     }
 
     stage('Angular') {
-      steps { bat 'npm install --save-dev @angular-devkit/build-angular'}
+      steps { bat 'npm install -g @angular-devkit/build-angular'}
     }
 
     stage('Test') {
