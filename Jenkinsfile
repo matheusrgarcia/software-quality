@@ -3,8 +3,12 @@ pipeline {
 
   stages {
 
+    state('Login') {
+      steps { bat 'npm set //https://registry.npmjs.com/:_authToken $npmToken'}
+    }
+
     stage('Install') {
-      steps { bat 'npm install --registry https://registry.npmjs.com/ --auth=${env.npmToken} --always-auth=true' }
+      steps { bat 'npm install'}
     }
 
     // stage('Angular CLI') {
