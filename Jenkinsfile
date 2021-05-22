@@ -15,10 +15,6 @@ pipeline {
       steps { bat 'npm config set //registry.npmjs.com/:always-auth true'}
     }
 
-     stage('lOGIN') {
-      steps { bat 'npm login'}
-    }
-
     stage('Install') {
       steps { bat 'npm install'}
     }
